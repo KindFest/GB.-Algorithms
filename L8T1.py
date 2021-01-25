@@ -21,8 +21,8 @@ def substr_count_1(my_str):
     """
     result = []
     i = len(my_str)
+    lenght = len(my_str)
     while i > 0:
-        lenght = len(my_str)
         for j in range(lenght - i + 1):
             if hashlib.sha256(my_str[j:j + i].encode('utf-8')).hexdigest() not in result:
                 result.append(hashlib.sha256(my_str[j:j + i].encode('utf-8')).hexdigest())
@@ -36,8 +36,8 @@ def substr_count_2(my_str):
     """
     result = set()
     i = len(my_str)
+    lenght = len(my_str)
     while i > 0:
-        lenght = len(my_str)
         for j in range(lenght - i + 1):
             result.add(my_str[j:j + i])
         i -= 1
